@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zikirmatik 2.0</title>
+
+    <link rel="stylesheet" href="output.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <script src="index.js" defer></script>
+</head>
+
+<body class="font-['poppins'] select-none">
+    <div id="zikir">
+        <button id="add" onclick="add()"></button>
+        <button id="reset" onclick="reset()"></button>
+        <h1 id="counter" class="absolute top-[42px]">0</h1>
+    </div>
+
+    <button id="full_screen" class="bg-gray-300 px-1 w-[150px] transition-all duration-200 z-20 overflow-hidden"
+        onclick="screenModes()">
+        <img src="fullscreen.svg" />Tap anywhere
+    </button>
+
+    <div id="fulDiv" class="absolute w-screen h-screen bg-blue-500/0 hidden" onclick="add()"></div>
+</body>
+
+</html>
