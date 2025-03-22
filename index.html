@@ -7,6 +7,7 @@
     <title>Zikirmatik 2.0</title>
 
     <link rel="stylesheet" href="output.css" />
+    <link rel="shortcut icon" href="zikirmatik.svg" type="image/x-icon">
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
@@ -24,6 +25,45 @@
         onclick="screenModes()">
         <img src="fullscreen.svg" />Tap anywhere
     </button>
+
+    <button id="settingsBTN" class="absolute top-[16px] rounded-[9px] right-[176px] w-[41px] h-[41px] bg-gray-300 "
+        onclick="openSettings()">
+        <img src="settings.svg" alt="settings"
+            class="absolute left-1/2 top-1/2 translate-[-50%] transition-all duration-200">
+    </button>
+
+    <div id="settingsPage"
+        class="w-[356px] h-[600px] absolute  left-1/2 top-[48vh] translate-[-50%] rounded-3xl bg-orange-400  transition-all duration-300">
+
+        <img src="closeSettings.svg" alt="x" onclick="closeSettings()" class="absolute right-0 m-[4px] p-[6px]">
+
+        <div id="vibration" class="absolute  top-[100px] w-[100%]  flex items-center justify-evenly">
+            <h1 class="font-medium  text-xl">Vibration</h1>
+            <div
+                class="w-[230px] h-[40px]  top-0 bg-gray-300 flex items-center [&>h1]:p-[12px] justify-evenly rounded-3xl px-[3px] [&>h1]:font-medium [&>h1]:z-40">
+
+                <h1 onclick="vibrationIntensity('mild')">mild</h1>
+                <h1 onclick="vibrationIntensity('normal')">normal</h1>
+                <h1 onclick="vibrationIntensity('intense')">intense</h1>
+
+                <div id="select"
+                    class="left-[177px] w-[84px] h-[40px] bg-gray-500 absolute rounded-3xl transition-all duration-200">
+                </div>
+
+            </div>
+        </div>
+
+        <div id="longVibrate" class="absolute w-[90%] top-[180px] flex items-center justify-evenly">
+            <h1 class="font-medium  text-xl">Long Vibrate Every</h1>
+            <input id="vibrateEveryInput" type="number"
+                class="border-2 w-[80px] h-[45px] text-center rounded-xl font-medium text-2xl bg-gray-300 border-gray-500 outline-none">
+            <script></script>
+        </div>
+
+        <button onclick="resetSettings()"
+            class="bg-orange-600 text-white px-6 py-2 rounded-lg text-lg font-medium absolute top-[520px] left-1/2 translate-x-[-50%]">Reset
+            Settings</button>
+    </div>
 
     <div id="fulDiv" class="absolute w-screen h-screen bg-blue-500/0 hidden" onclick="add()"></div>
 </body>
