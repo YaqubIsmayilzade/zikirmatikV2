@@ -22,13 +22,28 @@ localScreenMode();
 screenModes();
 vibrationIntensity();
 
+// Hook up vibrateEveryInput to localStorage
+const savedVibrateEveryInput = localStorage.getItem("vibrateEveryInput");
+if (savedVibrateEveryInput) {
+  vibrateEveryInput.value = savedVibrateEveryInput;
+} else {
+  vibrateEveryInput.value = 33; // Default value
+  localStorage.setItem("vibrateEveryInput", 33);
+}
+vibrateEveryInput.addEventListener("input", (event) => {
+  const value = event.target.value;
+  localStorage.setItem("vibrateEveryInput", value);
+});
+
 function add() {
   count++;
   localStorage.setItem("localCount", count);
   counter.textContent = count;
-  vibrate(vibration);
+
   if (count % vibrateEveryInput.value == 0) {
-    vibrate(1000);
+    vibrate([200, 50, 200, 50, 200]);
+  } else {
+    vibrate(vibration);
   }
 }
 function reset() {
