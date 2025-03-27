@@ -1,95 +1,100 @@
 @import "tailwindcss";
 
-
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    margin: 0px;
-    background-color: #B1C29E;
-    position: relative;
+body {
+  margin: 0px;
+  background-color: #b1c29e;
+  position: relative;
 }
 
-#zikir{
-    border: none;
-    position: fixed;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%,43%);
-    height: 439px;
-    width: 355px;
+#zikir {
+  border: none;
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  height: 439px;
+  width: 355px;
 
-
-    background: url("Union.svg");
-    background-repeat: no-repeat;
+  background: url("Union.svg");
+  background-repeat: no-repeat;
 }
 
-#add,#reset{
-    position: absolute;
-    width: 168px;
-    height: 168px;
-    border: none;
-    border-radius: 50%;
+#add,
+#reset {
+  position: absolute;
+  width: 168px;
+  height: 168px;
+  border: none;
+  border-radius: 50%;
 
-    top: 246px;
-    left: 93px;
-    background-color: #818C78;
+  top: 246px;
+  left: 93px;
+  background-color: #818c78;
 }
 
-#reset{
-    width: 52px;
-    height: 52px;
-    left: 239px;
-    top: 209px;
+#reset {
+  width: 52px;
+  height: 52px;
+  left: 239px;
+  top: 209px;
 }
 
-#zikir h1{
-    border: none;
-    position: absolute;
-    height: 140px;
-    width: 272px;
-    left: 41px;
-    border-radius: 47px;
-    background-color: #818C78 ;
-    text-align: center;
+#zikir h1 {
+  border: none;
+  position: absolute;
+  height: 140px;
+  width: 272px;
+  left: 41px;
+  border-radius: 47px;
+  background-color: #818c78;
+  text-align: center;
 
-
-    font-size: 80px;
-    font-family: poppins;
-    font-weight: 500;
-    line-height: 1.85;
-
+  font-size: 80px;
+  font-family: poppins;
+  font-weight: 500;
+  line-height: 1.85;
 }
 
-
-
-
-#full_screen{
-    height: 41px;
-    position: fixed;
-    top: 16px;
-    right: 19px;
-    border-radius: 9px;
-    border: none;
-    font-family: poppins;
-    font-weight: 500;
-    font-size: 14px;
-    text-align: right;
-    line-height:2.6 ;
-
-
-
-    
+#full_screen {
+  height: 41px;
+  position: fixed;
+  top: 16px;
+  right: 19px;
+  border-radius: 9px;
+  border: none;
+  font-family: poppins;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: right;
+  line-height: 2.6;
 }
 
-#full_screen img{
-    height: 35px;
-    width: 35px;
-    float: left;
-
+#full_screen img {
+  height: 35px;
+  width: 35px;
+  float: left;
 }
 
+.wrapper {
+  text-align: center;
+  height: 120px;
+  overflow: hidden;
+  width: 50px;
+}
 
+/*
+#FullScreenCounter {
+  display: flex;
+}*/
 
+.wrapper:nth-child(1) {
+  display: none;
+}
 
+.wrapper:nth-child(2) {
+  display: none;
+}

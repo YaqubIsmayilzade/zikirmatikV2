@@ -8,6 +8,7 @@ const settingsPage = document.getElementById("settingsPage");
 const settingsBTN = document.getElementById("settingsBTN");
 const selectVib = document.getElementById("select");
 const vibrateEveryInput = document.getElementById("vibrateEveryInput");
+const inputZikir = document.getElementById("InputZikir");
 
 let count = localStorage.getItem("localCount");
 counter.textContent = count;
@@ -17,10 +18,12 @@ let screenMode;
 let vibration = localStorage.getItem("vibration");
 let settingsOpened = false;
 vibrateEveryInput.value = 33;
+let savedZikir = localStorage.getItem("localZikir");
 
 localScreenMode();
 screenModes();
 vibrationIntensity();
+inputZikir.value = savedZikir || "Subhanallah";
 
 // Hook up vibrateEveryInput to localStorage
 const savedVibrateEveryInput = localStorage.getItem("vibrateEveryInput");
@@ -34,6 +37,12 @@ vibrateEveryInput.addEventListener("input", (event) => {
   const value = event.target.value;
   localStorage.setItem("vibrateEveryInput", value);
 });
+
+inputZikir.addEventListener("input", (event) => {
+  const value = event.target.value;
+  localStorage.setItem("localZikir", value);
+});
+savedZikir = localStorage.getItem("localZikir");
 
 function add() {
   count++;
@@ -97,6 +106,9 @@ function handleFullScreen() {
   resBut.style.display = "none";
   zikir.style.background = "none";
   settingsBTN.style.display = "none";
+
+  inputZikir.style.border = "none";
+
   counter.setAttribute(
     "style",
     "background-color: transparent; top:50%;left:50% ;    transform: translate(-50% ,-50%);"
@@ -112,7 +124,9 @@ function handleMinimized() {
 
   addBut.style.display = "block";
   resBut.style.display = "block";
+
   zikir.style.background = 'url("Union.svg")';
+  inputZikir.style.borderBottom = "3px solid black";
 
   counter.setAttribute(
     "style",

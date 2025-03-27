@@ -237,6 +237,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -263,6 +266,9 @@
   }
   .right-\[176px\] {
     right: 176px;
+  }
+  .left-1 {
+    left: calc(var(--spacing) * 1);
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
@@ -498,6 +504,9 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -527,6 +536,9 @@
   }
   .w-screen {
     width: 100vw;
+  }
+  .max-w-\[90\%\] {
+    max-width: 90%;
   }
   .max-w-none {
     max-width: none;
@@ -626,6 +638,22 @@
   }
   .translate-x-\[-50\%\] {
     --tw-translate-x: -50%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[140\%\] {
+    --tw-translate-y: 140%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[150\%\] {
+    --tw-translate-y: 150%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[160\%\] {
+    --tw-translate-y: 160%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[180\%\] {
+    --tw-translate-y: 180%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-3d {
@@ -1120,6 +1148,10 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .border-b-3 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 3px;
+  }
   .border-l {
     border-left-style: var(--tw-border-style);
     border-left-width: 1px;
@@ -1168,6 +1200,9 @@
   }
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
+  }
+  .bg-blue-500 {
+    background-color: var(--color-blue-500);
   }
   .bg-blue-500\/0 {
     background-color: color-mix(in oklab, var(--color-blue-500) 0%, transparent);
@@ -1373,6 +1408,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-\[3px\] {
+    padding-block: 3px;
   }
   .text-center {
     text-align: center;
@@ -1987,7 +2025,7 @@ html {
 }
 body {
   margin: 0px;
-  background-color: #B1C29E;
+  background-color: #b1c29e;
   position: relative;
 }
 #zikir {
@@ -1995,13 +2033,13 @@ body {
   position: fixed;
   top: 0%;
   left: 50%;
-  transform: translate(-50%,43%);
+  transform: translate(-50%, 50%);
   height: 439px;
   width: 355px;
   background: url("Union.svg");
   background-repeat: no-repeat;
 }
-#add,#reset {
+#add, #reset {
   position: absolute;
   width: 168px;
   height: 168px;
@@ -2009,7 +2047,7 @@ body {
   border-radius: 50%;
   top: 246px;
   left: 93px;
-  background-color: #818C78;
+  background-color: #818c78;
 }
 #reset {
   width: 52px;
@@ -2024,7 +2062,7 @@ body {
   width: 272px;
   left: 41px;
   border-radius: 47px;
-  background-color: #818C78;
+  background-color: #818c78;
   text-align: center;
   font-size: 80px;
   font-family: poppins;
